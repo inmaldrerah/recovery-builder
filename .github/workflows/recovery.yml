@@ -15,7 +15,7 @@ on:
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
   DEVICE: ossi
-  DT_LINK: https://github.com/inmaldrerah/android_device_oplus_ossi_cph2487.git
+  DT_LINK: https://github.com/inmaldrerah/android_device_oplus_ossi_cph2487.git -b ossi-user-12-SKQ1.221119.001-1683558616484-release-keys
   DT_PATH: device/oplus/ossi
   TARGET: recoveryimage
   TZ: UTC
@@ -38,7 +38,7 @@ jobs:
             sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php* 
             sudo -E apt-get clean
             sudo -E apt-get -qq update
-            sudo -E apt-get -qq install bc build-essential zip curl libstdc++6 git wget python gcc clang libssl-dev rsync flex curl  bison aria2
+            sudo -E apt-get -qq install bc build-essential zip curl libstdc++6 git wget python3 gcc clang libssl-dev rsync flex curl  bison aria2
             sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
             sudo chmod a+rx /usr/local/bin/repo
             
